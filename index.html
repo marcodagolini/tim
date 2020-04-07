@@ -1,9 +1,12 @@
 <html>
  <head>
- 
-
 	 
- 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> 
+	
+
+
+
+	
 
 	 
 <!-- BEGIN LivePerson Monitor. -->
@@ -15,7 +18,7 @@
 
 
 
-  
+ 
  
  
  <title>TIM</title>
@@ -26,41 +29,58 @@
 	 	height: 100%;
  		margin : 0px;
  		padding: 0px;
- 		background-image: url("https://i.imgur.com/txIlo4Y.png");
+ 		background-image: url("https://res.cloudinary.com/djtjkiytu/image/upload/v1586241161/Screenshot_2020-04-07_at_08.32.18.png");
  		background-repeat: no-repeat;
 		background-size: contain;
 	}
+	 
+
   
 .myDiv {
   color: red;
   font-size: 30px;
   position: absolute;
-  top: 620px;
+  top: 500px;
   left: 20px;
 }
-.myNameInput {
-  font-size: 30px;
+.pwdCobrowseAlert {
+  display: none;
+  color: red;
+  font-size: 11px;
   position: absolute;
-  top: 150px;
-  left: 150px;
+  top: 630px;
+  left: 25px;
 }
-.addressInput {
+.myUsernameInput {
   font-size: 30px;
   position: absolute;
-  top: 100px;
+  top: 545px;
   left: 150px;
 } 
-.Name {
+.Username {
   font-size: 30px;
   position: absolute;
-  top: 150px;
+  top: 540px;
   left: 20px;
   margin-top: 8px;
 }
-.Address {
+#myDisclaimer {
+  font-size: 10px;
+  position: absolute;
+  top: 740px;
+  left: 20px;
+} 
+	 
+.myPasswordInput {
   font-size: 30px;
   position: absolute;
-  top: 100px;
+  top: 585px;
+  left: 150px;
+} 
+.Password {
+  font-size: 30px;
+  position: absolute;
+  top: 580px;
   left: 20px;
   margin-top: 8px;
 } 
@@ -251,14 +271,14 @@ function authenticate(){
 	
 	window.lpGetAuthenticationToken = function(callback) {
 		console.log("inside lpGetAuthenticationToken!");
-		var token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3NvbWV0aGluZy5pdCIsInN1YiI6InV5Z2h2Z3RkY2d2aHUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJKb2huRG9lIiwicGhvbmVfbnVtYmVyIjoiKzEtMTAtMzQ0LTM3NjUzMzMiLCJnaXZlbl9uYW1lIjoiVGVzdCIsImZhbWlseV9uYW1lIjoiVGVzdDIiLCJlbWFpbCI6ImVtYWlsQGVtYWlsLmNvbSIsImdlbmRlciI6Ik1hbGUiLCJscF9zZGVzIjpbeyJ0eXBlIjoiY3RtcmluZm8iLCJpbmZvIjp7ImNzdGF0dXMiOiJjYW5jZWxsZWQiLCJjdHlwZSI6InZpcCIsImN1c3RvbWVySWQiOiJhYmMxMjM0NTYiLCJiYWxhbmNlIjoiLTQwMC45OSIsInNvY2lhbElkIjoiMzQ1Njc4NzY1NCIsImltZWkiOiI5OTk2NjMyMSIsInVzZXJOYW1lIjoidXNlcjAwMCIsImNvbXBhbnlTaXplIjoiNTAwIiwiYWNjb3VudE5hbWUiOiJiYW5rIGNvcnAiLCJyb2xlIjoiYnJva2VyIiwibGFzdFBheW1lbnREYXRlIjp7ImRheSI6IjE1IiwibW9udGgiOiIxMCIsInllYXIiOiIyMDE0In0sInJlZ2lzdHJhdGlvbkRhdGUiOnsiZGF5IjoiMjMiLCJtb250aCI6IjUiLCJ5ZWFyIjoiMjAxMyJ9fX0seyJ0eXBlIjoicGVyc29uYWwiLCJwZXJzb25hbCI6eyJmaXJzdG5hbWUiOiJKb2huIiwibGFzdG5hbWUiOiJEb2UiLCJhZ2UiOnsiYWdlIjoiMzQiLCJ5ZWFyIjoiMTk4MCIsIm1vbnRoIjoiNCIsImRheSI6IjE1In0sImNvbnRhY3RzIjpbeyJlbWFpbCI6Im15bmFtZUBleGFtcGxlLmNvbSIsInBob25lIjoiMDAzOSAzNDcgNzU3NjU3NyJ9XSwiZ2VuZGVyIjoiTUFMRSIsImNvbXBhbnkiOiJMaXZlUGVyc29uIn19XSwiaWF0IjoxNTcyMTI0NzM5LCJleHAiOjIxNzIxMjQ3Mzl9.TBOQEFgpe5OUmSyeCRQse9mSsdKtZbYCJOPmelPb73gDJNtCsPT_PvYObN0sLpZfzg9YDJGXTzF5z01x3CvPDW_l3o5WAtHJXo1wgsWY6fZzI-vF1ksKK8YkqPN9jfQtV9T4FZEayM4dQbqDf0RoN0v8f8GX6bjy7EOvhwd0_v1BAxZK_Co8tX2hYLzpNxa_IQ9YTnp5NdBTsLlhx5R6whfiOgoW_YtJZrLYtr9-QLoG4lNmxf1IE9qUefzVADEOLKdz72OBHjttNYWCuGCDC9AuLdHItbTPOdkWjGs4Ngwrp6Dc19Rk3SxAZ81ejm1toASNjCgLjeuP7GZQMzPxwA";
+		var token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL3NvbWV0aGluZy5pdCIsInN1YiI6ImFiYzEyMzQ1Njc4IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiSm9obkRvZSIsInBob25lX251bWJlciI6IisxLTEwLTM0NC0zNzY1MzMzIiwiZ2l2ZW5fbmFtZSI6IlRlc3QiLCJmYW1pbHlfbmFtZSI6IlRlc3QyIiwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJnZW5kZXIiOiJNYWxlIiwibHBfc2RlcyI6W3sidHlwZSI6ImN0bXJpbmZvIiwiaW5mbyI6eyJjc3RhdHVzIjoiY2FuY2VsbGVkIiwiY3R5cGUiOiJ2aXAiLCJjdXN0b21lcklkIjoiYWJjMTIzNDU2IiwiYmFsYW5jZSI6Ii00MDAuOTkiLCJzb2NpYWxJZCI6IjM0NTY3ODc2NTQiLCJpbWVpIjoiOTk5NjYzMjEiLCJ1c2VyTmFtZSI6InVzZXIwMDAiLCJjb21wYW55U2l6ZSI6IjUwMCIsImFjY291bnROYW1lIjoiYmFuayBjb3JwIiwicm9sZSI6ImJyb2tlciIsImxhc3RQYXltZW50RGF0ZSI6eyJkYXkiOiIxNSIsIm1vbnRoIjoiMTAiLCJ5ZWFyIjoiMjAxNCJ9LCJyZWdpc3RyYXRpb25EYXRlIjp7ImRheSI6IjIzIiwibW9udGgiOiI1IiwieWVhciI6IjIwMTMifX19LHsidHlwZSI6InBlcnNvbmFsIiwicGVyc29uYWwiOnsiZmlyc3RuYW1lIjoiSm9obiIsImxhc3RuYW1lIjoiRG9lIiwiYWdlIjp7ImFnZSI6IjM0IiwieWVhciI6IjE5ODAiLCJtb250aCI6IjQiLCJkYXkiOiIxNSJ9LCJjb250YWN0cyI6W3siZW1haWwiOiJteW5hbWVAZXhhbXBsZS5jb20iLCJwaG9uZSI6IjM5MzQyNTkyOTAxNSJ9XSwiZ2VuZGVyIjoiTUFMRSIsImNvbXBhbnkiOiJMaXZlUGVyc29uIn19XSwiaWF0IjoxNTc0OTk0NDY0LCJleHAiOjIxNzQ5OTQ0NjR9.k2ztRG50w8BJqsBetbxDub_Xty3EmugshBg_Q2LDETmhEhEKhMgY2MUcr8sR1gpOweBYxbcLVtKATWHXvVXXXaTbcY825_AVNDm24AGHPZT_S6PI228ziy2v6-rzujmBUU_wq5IDcxWEZGVIlY2FPFFXyALOUvjx0LBSoQkxg0t0vIi0ADXkc4b-46YE854gC7YX2ueNaN_Siji_cWWjBNKomgVDGwe89szw0jvyDVu4IvPCSbqXwFpiDh6IyQNDB8ntb158VJ2on5yUNYLF_rGZBZlb843Hr4AXb0KM9RpjQKpwhbrt7hdlHAlTjCW3zKaNEaifr9e0J5SjkYLGFA";
 		callback(token);
 	};
 	
 	setTimeout(function(){
 		console.log("inside2");
 		var CurrentLocation = window.location.href;
-		lpTag.newPage(CurrentLocation, {section: "tim"});
+		lpTag.newPage(CurrentLocation, {section: "costacrociere"});
 		lpTag.sdes.push({
 			"type": "ctmrinfo",
 			"info": {
@@ -335,6 +355,28 @@ function createstars(n) {
   return stars;
 }
 $(document).ready(function() {
+	
+	function coBrowse(data, eventInfo){
+		console.log("data --> " + JSON.stringify(data));
+		console.log("eventInfo --> " + JSON.stringify(eventInfo));
+		if(window.console && window.JSON){
+			if(eventInfo.eventName === "sessionStarted"){
+				$(".pwdCobrowseAlert").show();
+			}
+			if(eventInfo.eventName === "sessionEnd"){
+				$(".pwdCobrowseAlert").hide();
+			}
+		}
+	}	
+
+	
+	lpTag.events.bind({
+		eventName : "*",
+		appName : "cobrowse",
+		func: coBrowse,
+		triggerOnce : false
+	});
+	
   var timer = "";
   $("body").on("keyup", ".pass", function(e) {
     var code = e.which;
@@ -360,12 +402,19 @@ $(document).ready(function() {
   </script>
 	  
 	 
-	<div id="customerID" class="myDiv">Highlight this!</div><br>
-	<div id="Name" class="Name">Name: </div> <input class="myNameInput" size="15" type="text" name="FirstName" value="Name">
-	<div id="Address" class="Address">Address: </div> <input class="addressInput" size="15" type="text" name="Address" value="Address">
+	 <div id="customerID" class="myDiv">Highlight this!</div><br>
+	 <div id="Username" class="Username">Username: </div> <input class="myUsernameInput" size="15" type="text" name="UserName" value="Username">
+	 <div id="Password" class="Password">Password: </div> <input class="myPasswordInput" size="15" type="text" name="myPassword" value="Password">
+	 <div id="pwdCobrowseAlert" class="pwdCobrowseAlert">*** Password will be not shown to the Agent during CoBrowse session ***</div>
+
+
+
+	 <div id="myDisclaimer">Property of LivePerson</div>
+
+	 
 	  
-	<div id="myLogin" class="myLoginButton">Login</div>
-	<div id="myLogOut" class="myLoginButton" style="display:none;">Logout</div>
+	  <div id="myLogin" class="myLoginButton">Login</div>
+	   <div id="myLogOut" class="myLoginButton" style="display:none;">Logout</div>
 
 <div id="id01" class="myModal">
   
